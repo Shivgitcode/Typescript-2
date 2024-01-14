@@ -130,3 +130,5 @@ const cutcross: string[][] = [
   ["x", "o", "x"],
   ["x", "o", "x"],
 ];
+
+console.log("i am inside typescript");
