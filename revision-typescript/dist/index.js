@@ -71,3 +71,45 @@ const cutcross = [
     ["x", "o", "x"],
 ];
 console.log("i am inside typescript");
+const car1 = { name: "harrier", model: "black knight", price: 1500000 };
+//union types
+const isLoading = "shivansh"; // this variable can have both kind of values boolean and string
+// function parameter can also have union type values
+function printage(age) {
+    if (typeof age === "string") {
+        return age.toUpperCase(); //this is called typenarrowing
+    }
+    return age * 2;
+}
+const animal = { breed: "german", Catname: "jesper" };
+const day = "Monday"; // this okay
+// const day2:DayOfWeek="January" // this is not okay
+// printage(true)
+// tuples
+const employee = ["shivansh", 2210990830]; //this is a tuple
+employee.push("aggarwal"); // tuples behave differently when used with push as you can see that employee can only hold two values but when we are pushing an element into the same array it is not showing any error that's how tuples behave
+const goodRes = ["ok", 200];
+// Enums
+var Responses;
+(function (Responses) {
+    Responses["no"] = "No";
+    Responses["yes"] = "yes";
+    Responses["maybe"] = "May";
+})(Responses || (Responses = {}));
+const stat = Responses.no;
+var Marks;
+(function (Marks) {
+    Marks[Marks["math"] = 0] = "math";
+    Marks[Marks["science"] = 1] = "science";
+    Marks[Marks["hindi"] = 2] = "hindi";
+})(Marks || (Marks = {}));
+const mySongs = {
+    track: "starboy",
+    artist: "The weekend",
+    followers: 2000000,
+    songPlayed(num) {
+        return (num * 3) / 2;
+    },
+    album: "leo",
+    totalSongs: 4,
+};

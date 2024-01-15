@@ -218,4 +218,32 @@ enum Marks { // by default value of first enum type  inside enum is 0 and then i
 
 // interfaces : these are like type aliases but have some different functions and are only used to declare objects
 
-interface;
+interface Spotify {
+  readonly track: string;
+  artist: string;
+  followers?: number;
+  // songPlayed(): number;
+  songPlayed: (num: number) => number;
+}
+
+const mySongs: Spotify = {
+  track: "starboy",
+  artist: "The weekend",
+  followers: 2000000,
+  songPlayed(num) {
+    return (num * 3) / 2;
+  },
+  album: "leo",
+  totalSongs: 4,
+};
+
+// console.log(mySongs.songPlayed(30));
+
+interface Spotify {
+  album: string;
+  totalSongs: number;
+}
+
+interface Spotube extends Spotify {
+  key: string;
+}
