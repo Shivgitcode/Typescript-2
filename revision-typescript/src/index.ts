@@ -132,3 +132,90 @@ const cutcross: string[][] = [
 ];
 
 console.log("i am inside typescript");
+
+// type intersection
+
+type CarDesc = {
+  name: string;
+  model: string;
+  price?: number;
+};
+
+type CarLook = {
+  carno?: number;
+  color?: string;
+};
+
+type Car = CarDesc & CarLook;
+
+const car1: Car = { name: "harrier", model: "black knight", price: 1500000 };
+
+//union types
+
+const isLoading: boolean | string = "shivansh"; // this variable can have both kind of values boolean and string
+
+// function parameter can also have union type values
+
+function printage(age: string | number): string | number {
+  if (typeof age === "string") {
+    return age.toUpperCase(); //this is called typenarrowing
+  }
+  return age * 2;
+}
+
+// we can also make our custom union types
+
+type Dog = {
+  breed: string;
+};
+
+type Cat = {
+  Catname: string;
+};
+
+const animal: Dog | Cat = { breed: "german", Catname: "jesper" };
+
+// literal type unions
+
+type DayOfWeek =
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday"
+  | "Sunday";
+
+const day: DayOfWeek = "Monday"; // this okay
+// const day2:DayOfWeek="January" // this is not okay
+
+// printage(true)
+
+// tuples
+
+const employee: [string, number] = ["shivansh", 2210990830]; //this is a tuple
+employee.push("aggarwal"); // tuples behave differently when used with push as you can see that employee can only hold two values but when we are pushing an element into the same array it is not showing any error that's how tuples behave
+
+type Httpsresponse = [string, number];
+
+const goodRes: Httpsresponse = ["ok", 200];
+
+// Enums
+
+enum Responses {
+  no = "No",
+  yes = "yes",
+  maybe = "May",
+}
+
+const stat = Responses.no;
+
+enum Marks { // by default value of first enum type  inside enum is 0 and then it is  incremented as we declare more values and we can also assign values to the constants inside enum
+  math,
+  science,
+  hindi,
+}
+
+// interfaces : these are like type aliases but have some different functions and are only used to declare objects
+
+interface;
