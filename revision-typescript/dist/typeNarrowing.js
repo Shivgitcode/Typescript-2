@@ -38,3 +38,20 @@ function printFullDate(date) {
 function isCat(animal) {
     return animal.numLives !== undefined;
 }
+function getFarmAnimalSound(animal) {
+    switch (animal.kind) {
+        case "pig":
+            return "Oink!";
+        case "cow":
+            return "Mooo!";
+        case "rooster":
+            return "Cockadooledo";
+    }
+}
+const stevie = {
+    name: "Stevie Chicks",
+    weight: 2,
+    age: 1.5,
+    kind: "rooster",
+};
+console.log(getFarmAnimalSound(stevie));

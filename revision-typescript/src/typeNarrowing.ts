@@ -113,6 +113,22 @@ interface Pig {
 
 type farmAnimals = Rooster | Cow | Pig;
 
-function getFarmAnimalSound(animal: FarmAnimal) {
-  animal.kind;
+function getFarmAnimalSound(animal: farmAnimals) {
+  switch (animal.kind) {
+    case "pig":
+      return "Oink!";
+    case "cow":
+      return "Mooo!";
+    case "rooster":
+      return "Cockadooledo";
+  }
 }
+
+const stevie: Rooster = {
+  name: "Stevie Chicks",
+  weight: 2,
+  age: 1.5,
+  kind: "rooster",
+};
+
+console.log(getFarmAnimalSound(stevie));
