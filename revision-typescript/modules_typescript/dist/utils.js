@@ -1,8 +1,8 @@
-"use strict";
-function add(x, y) {
+export function add(x, y) {
     return x + y;
 }
-function randomArrayNumber(arr) {
+export default function randomArrayNumber(arr) {
     const randIdx = Math.floor(Math.random() * arr.length);
     return arr[randIdx];
 }
+export const pi = 3.14;
