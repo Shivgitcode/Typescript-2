@@ -1,10 +1,11 @@
-import React from "react";
-
-interface Item {
-  id: number;
-  product: string;
-  quantity: number;
-}
+// import React from "react";
+// import { useState } from "react";
+// interface Item {
+//   id: number;
+//   product: string;
+//   quantity: number;
+// }
+import Item from "../model/item";
 
 export default function ShoppingList({
   items,

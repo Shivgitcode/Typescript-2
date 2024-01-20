@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "@types/bun": "^1.0.1",
+    "@types/uuid": "^9.0.7",
     "lite-server": "^2.6.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "uuid": "^9.0.1"
   },
   "scripts": {
     "start": "lite-server"
