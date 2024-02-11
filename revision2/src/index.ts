@@ -130,3 +130,36 @@ interface Grocery {
 
 
 const httprequest: [number, string] = [200, "GET"]
+
+
+// console.log(httprequest[0])
+httprequest[1] = "Post"
+
+// enums
+
+enum httprequest2 {
+  status,
+  method,
+  err = 500
+}
+
+const reqStatus = httprequest2.err
+
+interface Grocery {
+  noOfItems: number
+}
+
+
+const list1: Grocery[] = [
+  { item: "chips", price: 25, noOfItems: 4 },
+  { item: "coldrink", price: 40, noOfItems: 5 }
+]
+
+
+interface Clothes extends Grocery {
+  brand: string
+  size: string
+
+}
+
+
