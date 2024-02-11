@@ -45,3 +45,14 @@ function getSomething(x) {
 console.log(getSomething("shivansh"));
 // console.log(yo)
 console.log(getSomething(300));
+const numarr = [3, 2, 5, 6, 2, 1];
+numarr.forEach((el) => {
+    if (el > 5) {
+        console.log(el);
+    }
+});
+const male1 = {
+    name: "shivansh",
+    age: 19
+};
+const httprequest = [200, "GET"];

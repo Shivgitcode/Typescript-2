@@ -73,3 +73,60 @@ function getSomething(x: string | number): string | number {
 console.log(getSomething("shivansh"));
 // console.log(yo)
 console.log(getSomething(300));
+
+const numarr = [3, 2, 5, 6, 2, 1]
+
+numarr.forEach((el) => {
+  if (el > 5) {
+    console.log(el)
+  }
+})
+
+type Pop = {
+  name: string,
+  followers: number,
+  readonly totalTracks?: number
+  similarArtist?: {
+    name?: string,
+    followers: number
+  }
+}
+
+
+// let track1:Pop={
+//   name:"Flawless 2",
+//   followers:200000,
+//   totalTracks:3,
+//   similarArtist
+// }
+
+// track1.totalTracks=20
+
+type Humans = {
+  name: string,
+  age: number,
+
+}
+
+type Animals = {
+  name: string,
+  age: number,
+  breed?: string
+}
+
+type LivingOrganisms = Humans & Animals
+
+const male1: LivingOrganisms = {
+  name: "shivansh",
+  age: 19
+}
+
+
+interface Grocery {
+  item: string,
+  price: number,
+
+}
+
+
+const httprequest: [number, string] = [200, "GET"]
